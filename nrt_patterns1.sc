@@ -15,9 +15,9 @@ ffrq = 440;
 SynthDef(\syn1, { |freq = 440, amp = 0.9, scal = 0.1|
     var sig, env;
 	sig = SinOsc.ar([freq, freq], 0, scal);
-    env = Env.perc(0.0001, 
+    env = Env.perc(0.0001,
     //0.0625,
-    0.5, 
+    0.5,
     1, -8);
 //	env = Env([0,0.9,0.9,0], [0.07, 0.01, 0.1]*scal);
 	env = EnvGen.kr(env, doneAction: 2);
@@ -25,8 +25,8 @@ SynthDef(\syn1, { |freq = 440, amp = 0.9, scal = 0.1|
 }).writeDefFile;
 
 // pattern
-ext = 8; // Length of smallest repeating unit
-reps = 2; // # times to repeat this unit
+ext = 1; // Length of smallest repeating unit
+reps = 8; // # times to repeat this unit
 
 // s9 = Array.series(24, 1, 1);
 //s9 = Array.geom(24, 1, 3);
